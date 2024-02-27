@@ -111,7 +111,6 @@
             </div>
           </div>
         </div>
-        
       </div>
       <div
         class="hidden md:block border-top border-white w-full border-[1px]"
@@ -149,10 +148,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 3rem;
+
     .content1 {
       display: grid;
       grid-template-columns: repeat(5, minmax(0, 1fr));
+      row-gap: 2.5rem;
+
       .menu {
         display: flex;
         flex-direction: column;
@@ -181,15 +183,29 @@
         }
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .content1 {
         display: grid;
         grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 2.5rem;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .content1 {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
       .menu {
         display: flex;
         flex-direction: column;
         row-gap: 0.75rem;
+      }
+    }
+    @media (min-width: 993px) {
+      .content1 {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        row-gap: 2.5rem;
       }
     }
     .img {
