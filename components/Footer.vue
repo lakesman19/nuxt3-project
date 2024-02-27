@@ -1,23 +1,16 @@
 <template>
-  <div
-    class="w-[100%] flex flex-col justify-center items-center bg-[#0267FD] font1 py-9 mt-9"
-  >
-    <div class="w-[85%] text-white flex justify-center flex-col gap-y-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-y-3">
-        <div class="w-[100%]">
-          <div class="w-1/2">
-            <img
-              src="/assets/images/Logo.png"
-              alt="website logo"
-              class="object-fit w-[50%] h-full"
-            />
+  <div class="footer">
+    <div class="content">
+      <div class="content1">
+        <div class="img">
+          <div class="contain">
+            <img src="/assets/images/Logo.png" alt="website logo" class="" />
           </div>
           <span>Savings, Payments, Loans</span>
         </div>
-
-        <div class="flex flex-col gap-y-3 md:gap-y-6">
-          <h2 class="font-bold">Quick</h2>
-          <ul class="gap-2 flex flex-col">
+        <div class="menu">
+          <h2 class="menuh1">Quick</h2>
+          <ul class="ul">
             <li>
               <NuxtLink to="">Our Story</NuxtLink>
             </li>
@@ -29,9 +22,9 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-col gap-y-3 md:gap-y-6">
-          <h2 class="font-bold">Legals</h2>
-          <ul class="gap-2 flex flex-col">
+        <div class="menu">
+          <h2 class="menuh1">Legals</h2>
+          <ul class="ul">
             <li>
               <NuxtLink to="">Terms & Conditions</NuxtLink>
             </li>
@@ -40,30 +33,30 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-col gap-y-3 md:gap-y-6">
-          <h2 class="font-bold">Contact Us</h2>
-          <div class="gap-2 flex flex-col w-full">
-            <div class="flex gap-4 items-center w-full">
-              <span class="text-lg">
+        <div class="menu">
+          <h2 class="menuh1">Contact Us</h2>
+          <div class="ul">
+            <div class="contacts">
+              <span class="">
                 <img src="/assets/images/Vector2.png" alt="" />
               </span>
               <span class="break-all">
                 UAC Building, 1-5 Odunlami St, Lagos Island, Lagos
               </span>
             </div>
-            <div class="flex gap-4 items-center w-full">
-              <span class="text-lg">
+            <div class="contacts">
+              <span class="">
                 <img src="/assets/images/Vector.png" alt="" />
               </span>
               <span>+234 812 345 6789</span>
             </div>
-            <div class="flex gap-4 items-center w-full">
-              <span class="text-lg">
+            <div class="contacts">
+              <span class="">
                 <img src="/assets/images/mail 1.png" alt="" />
               </span>
               <span>hello@vale.ng</span>
             </div>
-            <div class="flex gap-2 items-center w-full">
+            <div class="socials">
               <span class="">
                 <img src="/assets/images/Vector3.png" alt="" />
               </span>
@@ -79,6 +72,46 @@
             </div>
           </div>
         </div>
+        <div class="menu">
+          <h2 class="menuh1">Contact Us</h2>
+          <div class="ul">
+            <div class="contacts">
+              <span class="">
+                <img src="/assets/images/Vector2.png" alt="" />
+              </span>
+              <span class="break-all">
+                UAC Building, 1-5 Odunlami St, Lagos Island, Lagos
+              </span>
+            </div>
+            <div class="contacts">
+              <span class="">
+                <img src="/assets/images/Vector.png" alt="" />
+              </span>
+              <span>+234 812 345 6789</span>
+            </div>
+            <div class="contacts">
+              <span class="">
+                <img src="/assets/images/mail 1.png" alt="" />
+              </span>
+              <span>hello@vale.ng</span>
+            </div>
+            <div class="socials">
+              <span class="">
+                <img src="/assets/images/Vector3.png" alt="" />
+              </span>
+              <span class="">
+                <img src="/assets/images/Vector4.png" alt="" />
+              </span>
+              <span class="">
+                <img src="/assets/images/bxl-twitter.svg.png" alt="" />
+              </span>
+              <!-- <span class="">
+                <img src="/assets/images/bxl-whatsapp-square.svg.png" alt="" />
+              </span> -->
+            </div>
+          </div>
+        </div>
+        
       </div>
       <div
         class="hidden md:block border-top border-white w-full border-[1px]"
@@ -101,4 +134,74 @@
 </script>
 
 <style lang="scss" scoped>
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0267fd;
+  padding-top: 2.25rem; /* 9/4 = 2.25rem */
+  padding-bottom: 2.25rem;
+  margin-top: 2.25rem;
+  .content {
+    width: 85%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 1rem;
+    .content1 {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      .menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+        .menuh1 {
+          font-weight: 700;
+        }
+        .ul {
+          display: flex;
+          flex-direction: column;
+          row-gap: 0.75rem;
+        }
+        .contacts {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          gap: 1rem;
+          font-size: 1.125rem /* 18px */;
+          line-height: 1.75rem /* 28px */;
+        }
+        .socials {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          gap: 0.5rem;
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .content1 {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.75rem;
+      }
+    }
+    .img {
+      width: 100%;
+      .contain {
+        width: 50%;
+        img {
+          object-fit: contain;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
 </style>
